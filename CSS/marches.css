@@ -1,0 +1,169 @@
+main #section_1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 3svw;
+    margin: 5svh 0;
+}
+
+#section_1 div:not(.centre_edit):not(.centreGauche_edit):not(.editPage) {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+main #section_1 ol {
+    padding: 0;
+}
+
+ol li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-indent: -5px;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+ol li p {
+    margin-bottom: 0;
+}
+
+
+ol li p:before {
+    content: "- ";
+    text-indent: -5px;
+}
+
+ol li a {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--beige_primaire);
+    text-align: start;
+    margin-left: 10px;
+}
+
+a#les_marches {
+    background-color: var(--beige_primaire);
+    padding: 5px calc(0.4rem + 0.5vw);
+    border: 3px solid transparent;
+    animation: 1.5s linear 0s infinite alternate button_shadow;
+    border-radius: 10px;
+    color: var(--gris_fond);
+    font-size: 24px;
+    padding: 0;
+    margin-top: 5svh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 24px !important;
+    text-decoration: none;
+}
+
+a#les_marches:hover {
+    background-color: var(--gris_fond);
+    box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    border-color: var(--beige_primaire);
+    animation: none;
+    color: var(--beige_primaire);
+}
+
+@keyframes button_shadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    }
+}
+
+main #section_1 img {
+    width: clamp(100px, 33svw, 33svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border: 3px solid var(--beige_primaire);
+    margin-top: 10svh;
+    border-radius: 10px;
+}
+
+main #section_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3svw;
+    margin: 5svh 0;
+}
+
+main #section_2 .groupe_de_marchés {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main #section_2 .infos_marchés {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 1svw;
+    margin-left: 1svw;
+}
+
+main #section_2 .infos_marchés h4 {
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    main #section_1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 3svw;
+        margin: 5svh 0;
+    }
+
+    main #section_1 img {
+        width: clamp(100px, 80svw, 80svw);
+    }
+
+    #section_1 div:not(.centre_edit):not(.centreGauche_edit):not(.editPage) {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+    }
+
+    main #section_2 {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 0 3svw;
+        margin: 5svh 0;
+    }
+
+    main #section_2 .groupe_de_marchés {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}

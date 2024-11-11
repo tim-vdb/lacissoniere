@@ -1,0 +1,492 @@
+main #section_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6svw;
+    margin: 5svh 0;
+}
+
+main #section_1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40svw;
+}
+
+main #section_1 img {
+    width: clamp(100px, 35svw, 35svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center 5%;
+}
+
+main #section_1 p,
+main #section_1 h2 {
+    text-align: center;
+}
+
+main #parallax {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--marron_foncé);
+    background-image: url('images/cote_porc_banner_opti.jpg');
+    background-size: cover;
+    background-position: center;
+    background-position: center top;
+    background-attachment: fixed;
+    border: 3px solid var(--beige_primaire);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    padding: 10svh 0;
+}
+
+main #parallax div#content_parallax1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--gris_fond);
+    border-radius: 10px;
+    border: 3px solid var(--beige_primaire);
+    width: 50svw;
+    margin: 0 2.5svw;
+    padding: 0 3svw;
+}
+
+main #parallax div h2,
+main #parallax div p {
+    text-align: center;
+}
+
+main #parallax div.transparent {
+    background-color: transparent;
+    border: 3px solid transparent;
+}
+
+
+main #section_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6svw;
+    margin: 5svh 0;
+}
+
+main #section_2 img {
+    width: clamp(100px, 35svw, 35svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+}
+
+main #section_2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40svw;
+}
+
+main #section_2 p,
+main #section_2 h2 {
+    text-align: center;
+}
+
+main #section_2 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige_primaire);
+    border: 3px solid transparent;
+    animation: 1.5s linear 0s infinite alternate button_shadow;
+    border-radius: 10px;
+    color: var(--gris_fond);
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: clamp(var(--type-heading-h3-font-size-mobile), 5vw, var(--type-heading-h3-font-size));
+}
+
+main #section_2 a:hover {
+    background-color: var(--gris_fond);
+    box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    border-color: var(--beige_primaire);
+    animation: none;
+    color: var(--beige_primaire);
+}
+
+@keyframes button_shadow {
+    from {
+        box-shadow: none;
+    }
+
+    to {
+        box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    }
+}
+
+main #attribut {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3svh 3svw;
+    border: 3px solid var(--beige_primaire);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url("images/IMG_1997_opti.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+main #attribut img {
+    width: clamp(100px, 10svw, 10svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+}
+
+main #attribut div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main #attribut div p {
+    width: 80%;
+}
+
+main #attribut div p,
+main #attribut div h2 {
+    text-align: center;
+}
+
+main #section_3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3svw;
+}
+
+main #section_3 img#qui_sommes_nous {
+    width: clamp(100px, 50svw, 50svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border: 3px solid var(--beige_primaire);
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+main #section_3 div#div_qui_sommes_nous {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+main #section_3 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--beige_primaire);
+    padding: 5px calc(0.4rem + 0.5vw);
+    border: 3px solid transparent;
+    animation: 1.5s linear 0s infinite alternate button_shadow;
+    border-radius: 10px;
+    color: var(--gris_fond);
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: clamp(var(--type-heading-h3-font-size-mobile), 5vw, var(--type-heading-h3-font-size));
+}
+
+main #section_3 a:hover {
+    background-color: var(--gris_fond);
+    box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    border-color: var(--beige_primaire);
+    animation: none;
+    color: var(--beige_primaire);
+}
+
+main #cochon_anim1 {
+    width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+
+}
+
+main #cochon_anim2 {
+    width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin-left: 10%;
+}
+
+#div_cochon {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100%;
+    padding-top: 50px;
+}
+
+main #section_3 div#presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10svh;
+}
+
+main #section_3 h2 {
+    text-align: center;
+}
+
+main #section_3 p {
+    text-align: center;
+}
+
+main #élevage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 10svh 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("images/img-elevage-min_opti.jpg");
+    background-attachment: fixed;
+    border: 3px solid var(--beige_primaire);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: relative;
+}
+
+main #élevage p,
+main #élevage h4 {
+    text-align: center;
+    width: 80svw;
+}
+
+main #recettes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5svh 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 92%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/46B40A49-5125-407D-A336-DC207ABDF20E.webp");
+    border: 3px solid var(--beige_primaire);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+main #mainImage {
+    width: clamp(100px, 25svw, 60svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+}
+
+main .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5svh;
+}
+
+main .carousel-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--beige_primaire);
+    background-color: transparent;
+    text-align: center;
+    transform: scale(7) translateY(-10%);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+main .carousel-container button.previous {
+    margin-right: 5svw;
+}
+
+main .carousel-container button.next {
+    margin-left: 5svw;
+}
+
+section iframe {
+    margin: 5svh 0;
+}
+
+@media screen and (min-width: 1024px) {
+    main #attribut img {
+        width: clamp(100px, 10svw, 10svw);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main #section_1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 3svw;
+        margin: 5svh 0;
+    }
+
+    main #section_1 img {
+        width: clamp(100px, 80svw, 80svw);
+        min-height: 100px;
+        height: 100%;
+        max-height: 150svh;
+        object-fit: cover;
+        margin-right: 0;
+        margin-bottom: 1svh;
+        border-radius: 10px;
+        object-position: center 5%;
+    }
+
+    main #section_1 div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80svw;
+        margin-left: 0;
+    }
+
+    main section#parallax {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    main #parallax div#content_parallax1 {
+        width: 80svw;
+    }
+
+    main #parallax {
+        background-position: center center;
+    }
+
+    main #section_2 {
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 3svw;
+    }
+
+    main #section_2 div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80svw;
+    }
+
+    main #section_2 img {
+        width: clamp(100px, 80svw, 80svw);
+        min-height: 100px;
+        height: 100%;
+        max-height: 150svh;
+        object-fit: cover;
+        border: 3px solid var(--beige_primaire);
+        margin-right: 0;
+        border-radius: 10px;
+    }
+
+    main #attribut {
+        flex-direction: column;
+    }
+
+    main #attribut div#separate_attribut {
+        margin-bottom: 10svh;
+    }
+
+    main #élevage {
+        padding: 5svh 0;
+    }
+
+    main #recettes {
+        background-image: none;
+        border: none;
+    }
+
+    main #mainImage {
+        width: 60svw;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    main #section_3 {
+        margin-top: 5svh;
+        flex-direction: column-reverse;
+    }
+
+    main #section_3 img#qui_sommes_nous {
+        width: clamp(100px, 80svw, 80svw);
+        min-height: 100px;
+        height: 100%;
+        max-height: 150svh;
+        object-fit: cover;
+        margin-left: 0;
+    }
+
+    main #section_3 div#div_qui_sommes_nous {
+        padding-top: 0;
+    }
+
+    main #section_3 div#presentation {
+        padding-top: 5svh;
+    }
+
+    main .carousel-container button {
+        transform: scale(6) translateY(-10%);
+    }
+
+    section:last-of-type {
+        padding: 0 3svw;
+    }
+
+    section iframe {
+        border-left: 5px dashed var(--gris_fond) !important;
+        border-right: 5px dashed var(--gris_fond) !important;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    main #attribut img {
+        width: clamp(100px, 15svw, 15svw);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main #section_3 div#div_qui_sommes_nous {
+        padding-top: 0;
+    }
+
+    main .carousel-container button {
+        transform: scale(5) translateY(-10%);
+    }
+
+    main #attribut img {
+        width: clamp(100px, 20svw, 20svw);
+    }
+}

@@ -1,0 +1,144 @@
+main .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20svh 3svw 0 3svw;
+    margin: 5svh 0;
+}
+
+main .section div.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 100%;
+    place-items: center center;
+    gap: 20svh 0;
+}
+
+main .section div.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .section img {
+    width: clamp(100px, 25svw, 25svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+    object-position: center 5%;
+}
+
+main .section p,
+main .section h2 {
+    text-align: center;
+}
+
+main .section_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20svh 3svw 0 3svw;
+    margin: 5svh 0;
+}
+
+main .section_2 div.saison {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-top: 3px solid var(--beige_primaire);
+    position: relative;
+}
+
+main .section_2 div.saison::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background-color: var(--beige_primaire);
+    transform: translateX(-50%);
+}
+
+main .section_2 div.ete,
+main .section_2 div.hiver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+main .section_2 div.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 100%;
+    place-items: center center;
+    gap: 20svh 0;
+}
+
+main .section_2 div.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .section_2 img {
+    width: clamp(100px, 40svw, 40svw);
+    min-height: 100px;
+    height: 100%;
+    max-height: 150svh;
+    object-fit: cover;
+    border: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+    object-position: center 5%;
+}
+
+main .section p,
+main .section h3 {
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    main .section div.container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        width: 100%;
+        place-items: center center;
+        gap: 10svh 0;
+    }
+
+    main .section img {
+        width: clamp(100px, 80svw, 80svw);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main .section_2 img {
+        width: clamp(100px, 80svw, 80svw);
+    }
+
+    main .section_2 div.saison {
+        flex-direction: column;
+        border-top: 3px dashed var(--beige_primaire);
+    }
+
+    main .section_2 div.saison .titre_saison {
+        border-bottom: 3px solid var(--beige_primaire);
+    }
+
+    main .section_2 div.saison::before {
+        background-color: transparent;
+    }
+}

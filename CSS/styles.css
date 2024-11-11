@@ -1,0 +1,1022 @@
+:root {
+    --beige_primaire: rgb(241, 235, 225);
+    --gris_fond: rgb(28, 28, 27);
+    --type-heading-h1-font-size: 3.488rem;
+    --type-heading-h2-font-size: 2.074rem;
+    --type-heading-h3-font-size: 1.728rem;
+    --type-heading-h4-font-size: 1.44rem;
+    --type-heading-h1-font-size-mobile-max: 2.802rem;
+    --type-heading-h1-font-size-mobile-min: 2.202rem;
+    --type-heading-h2-font-size-mobile: 1.602rem;
+    --type-heading-h3-font-size-mobile: 1.424rem;
+    --type-heading-h4-font-size-mobile: 1.266rem;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 10px var(--beige_primaire);
+    border: solid 10px transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 10px 10px var(--beige_primaire);
+    border: solid 5px transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 10px 10px grey;
+    border: solid 5px transparent;
+    border-radius: 10px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    --typo: calc(0.01 * 10vmin);
+    --h1: calc(0.01 * 10vmin);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--gris_fond);
+    border: none;
+    border-style: none;
+    cursor: url("images/patte_cochon_3.png"), auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.body_menu_burger {
+    overflow-y: hidden !important;
+}
+
+body #Loader {
+    display: block;
+    width: 100svw;
+    height: 100svh;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--gris_fond);
+    border: 10px inset var(--beige_primaire);
+    border-style: solid inset solid solid;
+    box-sizing: border-box;
+    z-index: 9998;
+}
+
+@keyframes patte_cochon {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#patte1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1.75s backwards infinite alternate;
+    display: none;
+}
+
+#patte2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1.5s backwards infinite alternate;
+    display: none;
+}
+
+#patte3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1.25s backwards infinite alternate;
+    display: none;
+}
+
+#patte0_loader {
+    position: absolute;
+    top: calc(26% - 100px);
+    left: calc(38% + 50px);
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 3.25s backwards infinite alternate;
+}
+
+#patte1_loader {
+    position: absolute;
+    top: 26%;
+    left: 38%;
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 3s backwards infinite alternate;
+}
+
+#patte2_loader {
+    position: absolute;
+    top: calc(40% - 100px);
+    left: calc(42.5% + 50px);
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 2.75s backwards infinite alternate;
+}
+
+#patte3_loader {
+    position: absolute;
+    top: 40%;
+    left: 42.5%;
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 2.50s backwards infinite alternate;
+}
+
+#patte4_loader {
+    position: absolute;
+    top: calc(54% - 100px);
+    left: calc(47% + 50px);
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 2.25s backwards infinite alternate;
+}
+
+#patte5_loader {
+    position: absolute;
+    top: 54%;
+    left: 47%;
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 2s backwards infinite alternate;
+}
+
+#patte6_loader {
+    position: absolute;
+    top: calc(67% - 100px);
+    left: calc(51% + 50px);
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1.75s backwards infinite alternate;
+}
+
+#patte7_loader {
+    position: absolute;
+    top: 67%;
+    left: 51%;
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1.50s backwards infinite alternate;
+}
+
+#patte8_loader {
+    position: absolute;
+    top: calc(80% - 100px);
+    left: calc(55% + 50px);
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1.25s backwards infinite alternate;
+}
+
+#patte9_loader {
+    position: absolute;
+    top: 80%;
+    left: 55%;
+    width: 50px;
+    height: 50px;
+    background-image: url("images/patte_cochon_3.png");
+    background-size: cover;
+    z-index: 9999;
+    animation: patte_cochon 1s 1s backwards infinite alternate;
+}
+
+#Logo_loader {
+    bottom: 0%;
+    right: 0%;
+    width: clamp(100px, 200px, 200px);
+    min-height: 100px;
+    height: 100%;
+    max-height: 200px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--beige_primaire);
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1 {
+    font-size: clamp(var(--type-heading-h1-font-size-mobile-max), 5vw, var(--type-heading-h1-font-size));
+}
+
+h2 {
+    font-size: clamp(var(--type-heading-h2-font-size-mobile), 5vw, var(--type-heading-h2-font-size));
+}
+
+h3 {
+    font-size: clamp(var(--type-heading-h3-font-size-mobile), 5vw, var(--type-heading-h3-font-size));
+}
+
+h4 {
+    font-size: clamp(var(--type-heading-h4-font-size-mobile), 5vw, var(--type-heading-h4-font-size));
+}
+
+p,
+a,
+button,
+li {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--beige_primaire);
+    font-size: 1.25rem;
+}
+
+#btnTop {
+    color: rgb(181, 175, 165);
+    bottom: 20px;
+    right: 30px;
+    position: fixed;
+    z-index: 9997;
+    font-size: 65px;
+    display: none;
+    cursor: pointer;
+}
+
+.force-break {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.editPage {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.settings {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hidden-important {
+    display: none !important;
+}
+
+.centre_edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.centreGauche_edit {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.add-text-form,
+.add-file-form,
+.btnEnregistrer,
+.btnReset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border: 3px dashed var(--gris_fond);
+    color: var(--gris_fond);
+    margin: 5px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: clamp(var(--type-heading-h4-font-size-mobile), 5vw, var(--type-heading-h4-font-size));
+    cursor: pointer;
+}
+
+.file-upload-label {
+    background-color: lightgray;
+    border: 3px dashed var(--gris_fond);
+    color: var(--gris_fond);
+    margin: 5px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: clamp(var(--type-heading-h4-font-size-mobile), 5vw, var(--type-heading-h4-font-size));
+    cursor: pointer;
+}
+
+.add-text-form:hover,
+.add-file-form:hover,
+.btnEnregistrer:hover,
+.btnReset:hover,
+.file-upload-label:hover {
+    background-color: var(--gris_fond);
+    box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    border: 3px solid var(--beige_primaire);
+    color: var(--beige_primaire);
+    border-radius: 5px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+}
+
+.file-upload-input {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-filename {
+    display: block;
+    color: var(--beige_primaire);
+}
+
+.PopUp_enable {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 50vh;
+    position: fixed;
+    top: 25%;
+    z-index: 9997;
+    background-color: var(--gris_fond);
+    outline: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1), 0 15px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+#PopUp {
+    display: none;
+}
+
+.PopUp_enable h3 {
+    text-align: center;
+}
+
+.PopUp_enable div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.PopUp_enable #NPopUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gris_fond);
+    border: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+    color: red;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: clamp(var(--type-heading-h3-font-size-mobile), 5vw, var(--type-heading-h3-font-size));
+    cursor: pointer;
+}
+
+.PopUp_enable #YPopUp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gris_fond);
+    border: 3px solid var(--beige_primaire);
+    border-radius: 10px;
+    color: green;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: clamp(var(--type-heading-h3-font-size-mobile), 5vw, var(--type-heading-h3-font-size));
+    cursor: pointer;
+}
+
+.PopUp_enable #NPopUp:hover,
+.PopUp_enable #YPopUp:hover {
+    background-color: var(--beige_primaire);
+    box-shadow: 1px 1px 0.5em var(--beige_primaire);
+    border-color: var(--beige_primaire);
+}
+
+@media (pointer: coarse) {
+
+    #patte1,
+    #patte2,
+    #patte3 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hideOnPC {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: clamp(var(--type-heading-h1-font-size-mobile-min), 5vw, var(--type-heading-h1-font-size-mobile-max));
+    }
+
+    .hideOnPhone {
+        display: none !important;
+    }
+
+    .PopUp_enable {
+        width: 80vw;
+    }
+
+    .PopUp_enable div {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    #patte0_loader {
+        position: absolute;
+        top: 18%;
+        left: 46%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte1_loader {
+        position: absolute;
+        top: 26%;
+        left: 38%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte2_loader {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte3_loader {
+        position: absolute;
+        top: 40%;
+        left: 42.5%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte4_loader {
+        position: absolute;
+        top: 44%;
+        left: 54%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte5_loader {
+        position: absolute;
+        top: 54%;
+        left: 47%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte6_loader {
+        position: absolute;
+        top: 57%;
+        left: 58%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte7_loader {
+        position: absolute;
+        top: 67%;
+        left: 51%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte8_loader {
+        position: absolute;
+        top: 70%;
+        left: 62%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte9_loader {
+        position: absolute;
+        top: 80%;
+        left: 55%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+}
+
+
+@media screen and (min-width: 401px) and (max-width: 600px) and (min-height: 700px) {
+    #patte0_loader {
+        position: absolute;
+        top: 18%;
+        left: 41%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte1_loader {
+        position: absolute;
+        top: 26%;
+        left: 28%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte2_loader {
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte3_loader {
+        position: absolute;
+        top: 40%;
+        left: 32.5%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte4_loader {
+        position: absolute;
+        top: 44%;
+        left: 49%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte5_loader {
+        position: absolute;
+        top: 54%;
+        left: 37%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte6_loader {
+        position: absolute;
+        top: 57%;
+        left: 53%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte7_loader {
+        position: absolute;
+        top: 67%;
+        left: 41%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte8_loader {
+        position: absolute;
+        top: 70%;
+        left: 57%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #patte9_loader {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        width: calc(25px + 12.5px);
+        height: calc(25px + 12.5px);
+    }
+
+    #Logo_loader {
+        bottom: 0%;
+        right: 0%;
+        width: clamp(100px, 150px, 150px);
+        min-height: 100px;
+        height: 100%;
+        max-height: 150px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        position: absolute;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 400px) and (max-height: 700px) {
+
+    #patte0_loader {
+        position: absolute;
+        top: 18%;
+        left: 41%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte1_loader {
+        position: absolute;
+        top: 26%;
+        left: 28%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte2_loader {
+        position: absolute;
+        top: 30%;
+        left: 45%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte3_loader {
+        position: absolute;
+        top: 40%;
+        left: 32.5%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte4_loader {
+        position: absolute;
+        top: 44%;
+        left: 49%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte5_loader {
+        position: absolute;
+        top: 54%;
+        left: 37%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte6_loader {
+        position: absolute;
+        top: 57%;
+        left: 53%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte7_loader {
+        position: absolute;
+        top: 67%;
+        left: 41%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte8_loader {
+        position: absolute;
+        top: 70%;
+        left: 57%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte9_loader {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        width: 25px;
+        height: 25px;
+    }
+
+
+    #Logo_loader {
+        bottom: 0%;
+        right: 0%;
+        width: clamp(50px, 100px, 100px);
+        min-height: 50px;
+        height: 100%;
+        max-height: 100px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    ::-webkit-scrollbar {
+        width: 15px;
+        display: none;
+    }
+
+}
+
+@media screen and (max-height: 700px) {
+
+    #patte0_loader {
+        position: absolute;
+        top: 18%;
+        left: calc(28% + 35px);
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte1_loader {
+        position: absolute;
+        top: 26%;
+        left: 28%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte2_loader {
+        position: absolute;
+        top: 30%;
+        left: calc(32.5% + 35px);
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte3_loader {
+        position: absolute;
+        top: 40%;
+        left: 32.5%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte4_loader {
+        position: absolute;
+        top: 44%;
+        left: calc(37% + 35px);
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte5_loader {
+        position: absolute;
+        top: 54%;
+        left: 37%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte6_loader {
+        position: absolute;
+        top: 57%;
+        left: calc(41% + 35px);
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte7_loader {
+        position: absolute;
+        top: 67%;
+        left: 41%;
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte8_loader {
+        position: absolute;
+        top: 70%;
+        left: calc(45% + 35px);
+        width: 25px;
+        height: 25px;
+    }
+
+    #patte9_loader {
+        position: absolute;
+        top: 80%;
+        left: 45%;
+        width: 25px;
+        height: 25px;
+    }
+
+
+    #Logo_loader {
+        bottom: 0%;
+        right: 0%;
+        width: clamp(50px, 100px, 100px);
+        min-height: 50px;
+        height: 100%;
+        max-height: 100px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        position: absolute;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-height: 800px) and (min-height: 700px) {
+    #Logo_loader {
+        bottom: 0%;
+        right: 0%;
+        width: clamp(100px, 150px, 150px);
+        min-height: 100px;
+        height: 100%;
+        max-height: 150px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        position: absolute;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 450px) and (min-height: 600px) {
+    #Logo_loader {
+        bottom: 0%;
+        right: 0%;
+        width: clamp(100px, 150px, 150px);
+        min-height: 100px;
+        height: 100%;
+        max-height: 150px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        position: absolute;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 601px) and (min-width: 1024px) and (max-height: 800px) and (min-height: 600px)  {
+    #patte0_loader {
+        position: absolute;
+        top: 18%;
+        left: calc(38% + 35px);
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte1_loader {
+        position: absolute;
+        top: 26%;
+        left: 38%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte2_loader {
+        position: absolute;
+        top: 30%;
+        left: calc(42.5% + 35px);
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte3_loader {
+        position: absolute;
+        top: 40%;
+        left: 42.5%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte4_loader {
+        position: absolute;
+        top: 44%;
+        left: calc(47% + 35px);
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte5_loader {
+        position: absolute;
+        top: 54%;
+        left: 47%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte6_loader {
+        position: absolute;
+        top: 57%;
+        left: calc(51% + 35px);
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte7_loader {
+        position: absolute;
+        top: 67%;
+        left: 51%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte8_loader {
+        position: absolute;
+        top: 70%;
+        left: calc(55% + 35px);
+        width: 37.5px;
+        height: 37.5px;
+    }
+    
+    #patte9_loader {
+        position: absolute;
+        top: 80%;
+        left: 55%;
+        width: 37.5px;
+        height: 37.5px;
+    }
+}

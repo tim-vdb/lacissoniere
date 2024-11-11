@@ -1,0 +1,118 @@
+main #section_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3svw;
+    margin: 5svh 0;
+}
+
+main h2 {
+    text-align: center;
+}
+
+main form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: clamp(25svw, 50svw, 80svw);
+    background-color: var(--beige_primaire);
+    border: 3px solid var(--beige_primaire);
+    color: var(--gris_fond);
+    margin: 5svh 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1), 0 15px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+main form h3 {
+    color: var(--gris_fond);
+    border-bottom: 2px solid var(--gris_fond);
+    text-align: center;
+}
+
+main form #div_form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+main form .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    margin: 2svh 0;
+}
+
+main form button {
+    color: var(--beige_primaire);
+    background-color: var(--gris_fond);
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (pointer: fine) {
+    main form button:hover {
+        color: var(--gris_fond);
+        background-color: var(--beige_primaire);
+        border: 3px solid var(--gris_fond);
+    }
+}
+
+main form label {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+main form input {
+    width: 97%;
+    height: 30px;
+    margin-top: 0.5rem;
+    color: var(--gris_fond);
+    outline: 1px solid var(--gris_fond);
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+main form input:focus {
+    border-radius: 10px;
+}
+
+.input-container {
+    position: relative;
+    padding-right: 40px;
+}
+
+.input-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.input-container img {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-25%) translateX(-150%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    main form {
+        width: clamp(25svw, 70svw, 80svw);
+    }
+}

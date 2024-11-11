@@ -1,0 +1,17 @@
+# Assurez-vous que le module de réécriture est activé
+RewriteEngine On
+
+# Rediriger la racine vers lacissoniere.php sans afficher lacissoniere.php
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ lacissoniere.php [L]
+
+# Règle pour réécrire les URLs sans .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Redirection des .php vers les URLs sans .php pour éviter le contenu dupliqué
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+php_flag display_errors off
